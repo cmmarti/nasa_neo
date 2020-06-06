@@ -1,2 +1,3 @@
+
 build:
-  podman build -t fastapi .
+	podman build -t fastapi .
