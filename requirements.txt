@@ -1,3 +1,5 @@
 fastapi
-uvicorn
+ipdb
 jinja2
+requests
+uvicorn
