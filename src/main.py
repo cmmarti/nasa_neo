@@ -18,7 +18,3 @@ def feed(request=Request):
     response = repo.feed()
 
     return response
-
-    # return templates.TemplateResponse("feed.html", {
-    #     "request": request
-    # })
