@@ -1,9 +1,11 @@
+TAG=nasa_neo
 
 build:
-	podman build -t nasa_neo .
+	podman build -t $(TAG) .
 
 run:
-	podman run --rm -v $(PWD):/app:z -p 8000:8000 --name nasa_neo -d nasa_neo
+	podman run --rm -v $(PWD):/app:z -p 8000:8000 --name $(TAG) --env-file=$(PWD)/.env $(TAG)
+	podman logs -f $(TAG)
 
 stop:
-	podman stop nasa_neo
+	podman stop $(TAG)
