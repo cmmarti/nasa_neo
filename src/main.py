@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Request
 from fastapi.templating import Jinja2Templates
 
-import repo
+import neo
 
 app = FastAPI()
 
@@ -15,6 +15,8 @@ async def root():
 
 @app.get("/feed")
 def feed(request=Request):
-    response = repo.feed()
+    response = neo.feed()
+
+    print(response)
 
     return response
