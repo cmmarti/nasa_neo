@@ -17,4 +17,6 @@ async def root():
 def feed(request=Request):
     response = repo.feed()
 
+    print(response)
+
     return response

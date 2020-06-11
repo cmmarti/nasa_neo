@@ -7,9 +7,9 @@ class Neo():
 
     @classmethod
     def from_dict(cls, dict_neo):
-
-        Neo(dict_neo['id'],
-            dict_neo['name'],
-            dict_neo['potentially_hazardous'],
-            dict_neo['close_approach_date']
-            )
+        # TODO: move this to client
+        return Neo(dict_neo['id'],
+                   dict_neo['name'],
+                   dict_neo['is_potentially_hazardous_asteroid'],
+                   dict_neo['close_approach_data'][0]['close_approach_date']
+                   )
